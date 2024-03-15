@@ -54,16 +54,16 @@
                     clearInterval(interval);
                     progressText.innerHTML = "Успешно! Открываем меню...";
                     setInterval(() => {
-                        setTimeout(() => {
-                            location = "menu.html?x=" + Math.random();
-                        }, 50);
-                    }, 400);
+                        // setTimeout(() => {
+                        location = "menu.html?x=" + Math.random();
+                        // }, 50);
+                    }, 200);
                 } else {
                     width++;
                     progressBar.style.width = width + "%";
                     statusText.innerText = progressBar.style.width;
                 }
-            }, 4);
+            }, 3);
         }
     </script>
 </head>
