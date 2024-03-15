@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanki Online</title>
     <style id="page">
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
         body {
+            animation: fadeIn 0.4s ease-in;
             margin: 0;
             padding: 0;
             background: radial-gradient(50% 100% at 50% 100%, #395673 0%, #001926 100%);
