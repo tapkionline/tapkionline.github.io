@@ -10,16 +10,18 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
-        
+
         body {
             animation: fadeIn 0.4s ease-in;
             margin: 0;
             padding: 0;
-            background: radial-gradient(50% 100% at 50% 100%, #395673 0%, #001926 100%);
+            background: radial-gradient(50% 100% at 50% 100%, rgb(24 44 14) 0%, rgb(15 0 10) 100%);
+            /* radial-gradient(50% 100% at 50% 100%, #395673 0%, #001926 100%); */
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
@@ -27,40 +29,41 @@
             cursor: default;
             user-select: none;
         }
-        
+
         a {
             -webkit-user-drag: none;
             -webkit-touch-callout: none;
             -ms-touch-action: none;
             touch-action: none;
         }
-        
+
         a.no-drag {
             -webkit-user-drag: none;
             -webkit-touch-callout: none;
             -ms-touch-action: none;
             touch-action: none;
         }
-        
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 70px;
         }
-        
+
         .container::after {
             content: "";
             display: table;
             clear: both;
         }
-        
+
         .menuButton {
             float: left;
             margin-right: 20px;
             background-color: #405dff28;
             border-radius: 17px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+            box-shadow: 0 0 10px rgba(26, 131, 0, 0.411);
             padding: 40px;
             text-align: center;
             cursor: pointer;
@@ -69,36 +72,37 @@
             height: 200pt;
             color: #fff;
         }
-        
+
         .menuButton:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); */
+            box-shadow: 0 0 10px rgba(0, 255, 76, 0.411);
         }
-        
+
         .menuButton h2 {
             font-size: 28px;
             margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        
+
         a {
             text-decoration: none;
             color: inherit;
         }
-        
+
         .greeting {
             text-align: center;
             color: white;
             font-size: 20px;
         }
-        
+
         .main {
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url("./main.png");
         }
-        
+
         .test {
             background-repeat: no-repeat;
             background-size: cover;
@@ -110,7 +114,8 @@
 <body>
     <div class="greeting">
         <h1>
-            <!--<span style="color: rgb(170, 170, 170)"><s>Tanki</s> Online</span><br> -->Tapki Online</h1>
+            <!--<span style="color: rgb(170, 170, 170)"><s>Tanki</s> Online</span><br> -->Tapki Online
+        </h1>
         <p>Неофициальный игровой клиент tankionline.com «<b>TapkiOnline</b>» с шуточной локализацией, поддержкой постобработки<br> через шейдеры и приятными анимациями. А ещё он умеет заходить на тестовые сервера.</p>
         <p style="color: gray;">Используйте сочетание клавиш <b>Ctrl + 1</b> для получения списка команд</p>
     </div>
@@ -144,15 +149,14 @@
         }
 
         function callBlank() {
-            document.body.innerHTML = '<div class="container"><h1 style="color: white;">ЗАГРУЗКА...</h1></div>';
-
+            document.body.innerHTML = '<div class="container"><h1 style="color: white;">Скачивание и загрузка игровых ресурсов...</h1></div>';
         }
 
-        document.addEventListener("contextmenu", function(e) {
+        document.addEventListener("contextmenu", function (e) {
             e.preventDefault();
         });
 
-        document.addEventListener('wheel', function(event) {
+        document.addEventListener('wheel', function (event) {
             {
                 if (event.ctrlKey === true) {
                     event.preventDefault();
