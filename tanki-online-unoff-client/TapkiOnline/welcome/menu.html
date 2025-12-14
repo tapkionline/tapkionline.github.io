@@ -140,11 +140,13 @@
     <script>
         function loadMain() {
             callBlank();
+            sessionStorage.setItem("selectedServer", 1);
             location.href = "https://tankionline.com/play";
         }
 
         function loadTest() {
             callBlank();
+            sessionStorage.setItem("selectedServer", 2);
             location.href = "https://test.tankionline.com";
         }
 
